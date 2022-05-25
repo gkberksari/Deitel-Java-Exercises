@@ -1,0 +1,69 @@
+(Arithmetic, Smallest and Largest) Write an application that inputs three integers from the
+user and displays the sum, average, product, smallest and largest of the numbers. Use the techniques
+shown in Fig. 2.15. [Note: The calculation of the average in this exercise should result in an integer
+representation of the average. So, if the sum of the values is 7, the average should be 2, not
+2.3333….]
+
+
+import java.util.Scanner;
+
+public class NewMain {
+
+public static void main (String []args){
+
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.println("Hello! This program will show the sum, average, product, smallest and largest of the numbers that you entered.");
+    System.out.println("Please enter three integers");
+    int a = scan.nextInt();
+    int b = scan.nextInt();
+    int c = scan.nextInt();
+    
+    if(a<b && a<c){
+        System.out.println("The smallest number is "+a);        
+    }
+    
+    else if(b<a && b<c){
+        System.out.println("The smallest number is "+b);
+    }
+    
+    else{
+        System.out.println("The smallest number is "+c);
+    }
+    
+    System.out.println("Avarage is: "+(a+b+c)/3);
+    System.out.println("Sum is: "+ (a+b+c));
+    System.out.println("Product is: "+(a*b*c));
+    
+    if(a>b && a>c){
+        System.out.println("The largest number is "+a); 
+    }
+    else if(b>a && b>c){
+        System.out.println("The largest number is "+b); 
+    }
+    else{
+        System.out.println("The largest number is "+c); 
+    }
+    
+  
+        }
+
+}
+
+
+
+
+
+
+
+OUTPUT:
+Hello! This program will show the sum, average, product, smallest and largest of the numbers that you entered.
+Please enter three integers
+3
+7
+9
+The smallest number is 3
+Avarage is: 6
+Sum is: 19
+Product is: 189
+The largest number is 9
