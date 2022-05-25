@@ -1,0 +1,36 @@
+(Arithmetic) Write an application that asks the user to enter two integers, obtains them
+from the user and prints their sum, product, difference and quotient (division).
+
+
+import java.util.Scanner;
+
+public class NewMain {
+
+public static void main (String []args){
+
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.println("Hello! This program will show sum,product,difference and divison of two integers that you entered. ");
+    System.out.println("Please enter two integers");
+    int a = scan.nextInt();
+    int b = scan.nextInt();
+    
+    System.out.println("Sum: "+ (a+b) +"\nProduct: "+ (a*b) +"\nDifference: "+ (a-b) +"\nDivison: "+ (a/b));
+    
+    }
+
+}
+
+
+
+
+OUTPUT:
+
+Hello! This program will show sum,product,difference and divison of two integers that you entered. 
+Please enter two integers
+17
+3
+Sum: 20
+Product: 51
+Difference: 14
+Divison: 5
