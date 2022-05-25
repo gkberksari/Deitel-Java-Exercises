@@ -1,0 +1,36 @@
+(Largest and Smallest Integers) Write an application that reads five integers and determines
+and prints the largest and smallest integers in the group. Use only the programming techniques you
+learned in this chapter.
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+        
+        System.out.println("Hello! This program will show the smallest and largest integers that you entered");
+        System.out.println("Please enter 5 integers");
+        Scanner scan = new Scanner(System.in);
+        int l=0,s=0;
+        for(int i=0; i<5; i++){
+            int a = scan.nextInt();
+            if(l<a){
+            l=a;
+            }
+        }
+        System.out.println("The largest number is:"+l);
+        System.out.println("Please enter 5 integers");
+        
+        int b = scan.nextInt();
+        s=b;
+        
+        for(int i=0; i<4; i++){
+        if(s>b){
+            s=b;
+            }
+         b = scan.nextInt();
+        }
+        
+        System.out.println("The smallest number is: "+s);
+    }
+}
