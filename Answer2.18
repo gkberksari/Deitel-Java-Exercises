@@ -1,0 +1,24 @@
+(Displaying Shapes with Asterisks) Write an application that displays a box, an oval, an arrow and a diamond using asterisks (*), as follows:
+
+public class NewMain{
+    
+    public static void main(String[] args){
+        
+        System.out.println("**********");
+        for(int i=1; i<8; i++){
+            System.out.println("*        *");
+        }
+        System.out.println("**********\n\n\n\n\n\n");
+        
+        System.out.println("   ***   ");
+        System.out.println("  *   * ");
+        System.out.println("*       *");
+        System.out.println("*       *");
+        System.out.println("*       *");
+        System.out.println("*       *");
+        System.out.println("  *   * ");
+        System.out.println("   ***  \n\n\n\n\n\n");
+        
+        //and so on...
+    }
+}
