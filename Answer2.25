@@ -1,0 +1,29 @@
+(Odd or Even) Write an application that reads an integer and determines and prints whether it’s odd or even.
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+        
+     System.out.println("Hello! This program will show the number whether even or odd.");
+     System.out.println("Please enter an integer");
+     
+     Scanner scan = new Scanner(System.in);
+     
+     int a = scan.nextInt();
+     
+     if(a%2==0){
+         System.out.println("This number is even.");
+     }
+     else{
+         System.out.println("This number is odd.");
+     }
+     
+    }
+}
