@@ -1,0 +1,25 @@
+(Multiples) Write an application that reads two integers, determines whether the first is a multiple of the second and prints the result. 
+
+
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+  
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the first number  ");
+        int a = scan.nextInt();
+        System.out.println("Please enter the second number  ");
+        int b = scan.nextInt();
+        
+        if(b%a==0){
+            System.out.println("First number is multiple of the second number");
+        }
+        else{
+            System.out.println("First number is NOT multiple of the second number");
+        }
+     
+    }
+}
