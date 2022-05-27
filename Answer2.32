@@ -1,0 +1,88 @@
+Write a program that inputs five numbers and determines and prints the number of negative numbers input,
+the number of positive numbers input and the number of zeros input.
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+       Scanner scan = new Scanner(System.in);
+    
+       System.out.println("This program will group the numbers as negative, positive and zero");
+       System.out.println("Enter five numbers");
+        
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            int c = scan.nextInt();
+            int d = scan.nextInt();
+            int e = scan.nextInt();
+            
+            if(a<0){
+                System.out.println("The number "+a+" is negative.");
+            }
+            else if(a==0){
+                System.out.println("The number "+a+" is zero.");
+                
+            }
+            else{
+                System.out.println("The number "+a+" is positive");
+            }
+          
+             if(b<0){
+                System.out.println("The number "+b+" is negative.");
+            }
+            else if(b==0){
+                System.out.println("The number "+b+" is zero.");
+                
+            }
+            else{
+                System.out.println("The number "+b+" is positive");
+            }
+             
+              if(c<0){
+                System.out.println("The number "+c+" is negative.");
+            }
+            else if(c==0){
+                System.out.println("The number "+c+" is zero.");
+                
+            }
+            else{
+                System.out.println("The number "+c+" is positive");
+            }
+              
+               if(d<0){
+                System.out.println("The number "+d+" is negative.");
+            }
+            else if(d==0){
+                System.out.println("The number "+d+" is zero.");
+                
+            }
+            else{
+                System.out.println("The number "+d+" is positive");
+            }
+               
+                if(e<0){
+                System.out.println("The number "+e+" is negative.");
+            }
+            else if(e==0){
+                System.out.println("The number "+e+" is zero.");
+                
+            }
+            else{
+                System.out.println("The number "+e+" is positive");
+            }
+                
+             
+        
+    }
+}
