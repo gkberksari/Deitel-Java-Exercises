@@ -1,0 +1,37 @@
+(Car-Pool Savings Calculator) Research several car-pooling websites. Create an application
+that calculates your daily driving cost, so that you can estimate how much money could be saved by
+car pooling, which also has other advantages such as reducing carbon emissions and reducing traffic
+congestion. The application should input the following information and display the user’s cost per
+day of driving to work: 
+a) Total miles driven per day. 
+b) Cost per gallon of gasoline. 
+c) Average miles per gallon.
+d) Parking fees per day. 
+e) Tolls per day.
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+       Scanner scan = new Scanner(System.in);
+     System.out.println("This program will show the money that could be saved with carpooling");
+     System.out.println("Enter these values in order:\n)Total miles per day\nCost per gallon of gasoline\nAvarage miles per gallon\nParking fees per day\nTolls per day.");
+     float miles = scan.nextFloat();
+     float costgas = scan.nextFloat();
+     float milesgalon = scan.nextFloat();
+     float park =  scan.nextFloat();
+     float tolls = scan.nextFloat();
+     
+     float savedmoney = (miles/milesgalon)*costgas +park+ tolls;
+     
+     System.out.println("You would save "+savedmoney+" dollars if you use carpooling");
+    }
+}
