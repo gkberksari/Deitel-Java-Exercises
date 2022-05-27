@@ -1,0 +1,46 @@
+(World Population Growth Calculator) Use the web to determine the current world population and the annual world population growth rate.
+Write an application that inputs these values, then displays the estimated world population after one, two, three, four and five years.
+
+
+
+
+
+import java.util.Scanner;
+
+public class NewMain{
+    
+    public static void main(String[] args){
+       Scanner scan = new Scanner(System.in);
+     System.out.println("This is a sample world population growth calculator");
+     System.out.println("Enter the annual growth rate in percent: ");
+     double gr = scan.nextDouble();
+     long population=7794798759L;
+     double fy = gr/100*population+population;
+     double sy = gr/100*fy+fy;
+     double ty = gr/100*sy+sy;
+     double foy = gr/100*ty+ty;
+     double fiy = gr/100*foy+foy;
+     
+     System.out.printf("\nFirst year: %.0f",fy);
+     System.out.printf("\nSecond year: %.0f",sy);
+     System.out.printf("\nThird year: %.0f",ty);
+     System.out.printf("\nFourth year: %.0f",foy);
+     System.out.printf("\nFifthyear: %.0f",fiy);
+    }
+}
+
+
+
+
+
+OUTPUT:
+
+This is a sample world population growth calculator
+Enter the annual growth rate in percent: 
+1,05
+
+First year: 7876644146
+Second year: 7959348910
+Third year: 8042922073
+Fourth year: 8127372755
+Fifthyear: 8212710169
