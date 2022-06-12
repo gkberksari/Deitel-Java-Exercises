@@ -1,0 +1,86 @@
+(Employee Class) Create a class called Employee that includes three instance variables—a
+first name (type String), a last name (type String) and a monthly salary (double). Provide a constructor that initializes the three instance variables. 
+Provide a set and a get method for each instance variable. If the monthly salary is not positive, do not set its value.
+Write a test app named EmployeeTest that demonstrates class Employee’s capabilities. Create two Employee objects and display each
+object’s yearly salary. Then give each Employee a 10% raise and display each Employee’s yearly salary
+again.
+
+
+public class Employee {
+    
+    private String name;
+    private double salary;
+    
+    public Employee(String name, double salary){
+        this.name = name;
+        if(salary>0)
+        this.salary = salary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        if(salary>0)
+        this.salary = salary;
+    }
+    
+    public double yearlySalary(){
+        return salary*12;
+    }
+    
+    public void raise(double percent_amount_of_raise) {
+        salary = salary + (percent_amount_of_raise/100)*salary;
+    }
+}
+
+
+
+
+
+
+
+public class EmployeeTest {
+
+   
+    public static void main(String[] args) {
+        
+        Employee employee1 = new Employee("Gokberk",4250.0);
+        Employee employee2 = new Employee("Mehmet",-200.0);
+        System.out.println("employee1 name : "+employee1.getName()+"\nemployee1 monthly salary: "+employee1.getSalary());
+        System.out.println("\nemployee2 name : "+employee2.getName()+"\nemployee2 monthly salary: "+employee2.getSalary());
+        
+        System.out.println("\n\nYearly salary of employee1: "+employee1.yearlySalary());
+        
+        System.out.println("Now we give 10% raise for employee1");
+        employee1.raise(10);
+        System.out.println("Current salary of employee1 : "+employee1.getSalary()+"\nCurrent yearly salary : "+employee1.yearlySalary());
+    }
+    
+}
+
+
+
+
+OUTPUT:
+
+employee1 name : Gokberk
+employee1 monthly salary: 4250.0
+
+employee2 name : Mehmet
+employee2 monthly salary: 0.0
+
+
+Yearly salary of employee1: 51000.0
+Now we give 10% raise for employee1
+Current salary of employee1 : 4675.0
+Current yearly salary : 56100.0
