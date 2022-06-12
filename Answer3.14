@@ -1,0 +1,82 @@
+(Date Class) Create a class called Date that includes three instance variables—a month (type
+int), a day (type int) and a year (type int). Provide a constructor that initializes the three instance
+variables and assumes that the values provided are correct. Provide a set and a get method for each
+instance variable. Provide a method displayDate that displays the month, day and year separated
+by forward slashes (/). Write a test app named DateTest that demonstrates class Date’s capabilities. 
+
+
+
+public class Date {
+
+private String month;
+private int day;
+private int year;
+
+public Date(String month, int day, int year){
+    this.day = day;
+    this.month = month;
+    this.year = year;
+}
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void displayDate(){
+        System.out.println(month+"/"+day+"/"+year);
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+public class DateTest {
+
+    
+    public static void main(String[] args) {
+        
+        Date newdate = new Date("January",3,2008);
+        
+        newdate.displayDate();
+      
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+January/3/2008
