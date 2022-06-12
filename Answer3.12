@@ -1,0 +1,138 @@
+(Invoice Class) Create a class called Invoice that a hardware store might use to represent
+an invoice for an item sold at the store. An Invoice should include four pieces of information as
+instance variables—a part number (type String), a part description (type String), a quantity of the
+item being purchased (type int) and a price per item (double). Your class should have a constructor
+that initializes the four instance variables. Provide a set and a get method for each instance variable.
+In addition, provide a method named getInvoiceAmount that calculates the invoice amount (i.e.,
+multiplies the quantity by the price per item), then returns the amount as a double value. If the
+quantity is not positive, it should be set to 0. If the price per item is not positive, it should be set to
+0.0. Write a test app named InvoiceTest that demonstrates class Invoice’s capabilities.
+
+
+
+
+
+
+public class Invoice {
+    
+    private String partnumber;
+    private String description;
+    private int quantity_of_purchase;
+    private double price;
+    
+    public Invoice(String partnumber, String description, int quantity_of_purchase, double price){
+        
+        this.partnumber = partnumber;
+        this.description = description;
+        this.quantity_of_purchase = quantity_of_purchase;
+        this.price = price;
+    }
+
+    public String getPartnumber() {
+        return partnumber;
+    }
+
+    public void setPartnumber(String partnumber) {
+        this.partnumber = partnumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getQuantity_of_purchase() {
+        return quantity_of_purchase;
+    }
+
+    public void setQuantity_of_purchase(int quantity_of_purchase) {
+        this.quantity_of_purchase = quantity_of_purchase;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
+    public double getInvoiceAmount(){
+        
+        return quantity_of_purchase*price;
+    }
+   
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+public class InvoiceTest {
+
+   
+    public static void main(String[] args) {
+     Invoice item1  = new Invoice("234","Mouse",12,25);
+     Invoice item2 = new Invoice("123","Keyboard",14,56);
+     
+     System.out.println("The list of items and their qualifications: ");
+     System.out.println("ITEM1: ");
+     System.out.println("Part number  : "+item1.getPartnumber());
+     System.out.println("Description  : "+item1.getDescription());
+     System.out.println("Quantity of the item being purchased  : "+item1.getQuantity_of_purchase());
+     System.out.println("Price  : "+item1.getPrice());
+     System.out.println("\n\n\nITEM2: ");
+     System.out.println("Part number  : "+item2.getPartnumber());
+     System.out.println("Description  : "+item2.getDescription());
+     System.out.println("Quantity of the item being purchased  : "+item2.getQuantity_of_purchase());
+     System.out.println("Price  : "+item2.getPrice());
+     
+     System.out.println("\n\n\nInvoice Amounts: ");
+     System.out.println("Item1: "+item1.getInvoiceAmount());
+     System.out.println("Item2: "+item2.getInvoiceAmount());
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+OUTPUT:
+
+
+The list of items and their qualifications: 
+ITEM1: 
+Part number  : 234
+Description  : Mouse
+Quantity of the item being purchased  : 12
+Price  : 25.0
+
+
+
+ITEM2: 
+Part number  : 123
+Description  : Keyboard
+Quantity of the item being purchased  : 14
+Price  : 56.0
+
+
+
+Invoice Amounts: 
+Item1: 300.0
+Item2: 784.0
+    
