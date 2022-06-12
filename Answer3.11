@@ -1,0 +1,129 @@
+(Modified Account Class) Modify class Account (Fig. 3.8) to provide a method called withdraw that withdraws money from an Account. Ensure that the withdrawal amount does not exceed
+the Account’s balance. If it does, the balance should be left unchanged and the method should print
+a message indicating "Withdrawal amount exceeded account balance." Modify class AccountTest
+(Fig. 3.9) to test method withdraw.
+
+public class Account {
+    
+   private String name;
+   private double balance;
+   
+   public Account(String name, double balance){
+       this.name = name;
+       this.balance = balance;
+   }
+   
+   public void setname(String name){
+       this.name=name;
+   }
+    public String getname(){
+        return name;
+    }
+    
+    public void setbalance(double balance){
+        this.balance = balance;
+    }
+    
+    public double getbalance(){
+        return balance;
+    }
+    
+    public void deposit(double depositAmount){
+        if(depositAmount>0.0)
+            balance+=depositAmount;
+        
+    }
+    
+    public void withdraw(double withdrawAmount){
+        if(balance-withdrawAmount>=0)
+            balance = balance-withdrawAmount;
+        else
+            System.out.println("You have insufficient balance");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+public class AccountTest {
+
+   
+    public static void main(String[] args) {
+        Account account1 = new Account("Gokberk",25.0);
+        Account account2 = new Account("Mehmet",100.0);
+        
+        System.out.println(account1.getname()+"'s balance : "+account1.getbalance());
+        System.out.println(account2.getname()+"'s balance : "+account2.getbalance());
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter deposit amount for account1:  ");
+        
+        double addmoney = scan.nextDouble();
+        
+        System.out.println("Adding " +addmoney+" for account1's balance");
+        
+        account1.deposit(addmoney);
+         
+        System.out.println(account1.getname()+"'s balance : "+account1.getbalance());
+        System.out.println(account2.getname()+"'s balance : "+account2.getbalance());
+        
+        System.out.println("Enter withdraw amount for account2: ");
+        double withdrawmoney = scan.nextDouble();
+        
+        System.out.println("Withdrawing "+withdrawmoney+" from account2's balance");
+        
+        account2.withdraw(withdrawmoney);
+        
+         System.out.println(account1.getname()+"'s balance : "+account1.getbalance());
+        System.out.println(account2.getname()+"'s balance : "+account2.getbalance());
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+OUTPUT:
+Gokberk's balance : 25.0
+Mehmet's balance : 100.0
+Enter deposit amount for account1:  
+45,2
+Adding 45.2 for account1's balance
+Gokberk's balance : 70.2
+Mehmet's balance : 100.0
+Enter withdraw amount for account2: 
+43,5
+Withdrawing 43.5 from account2's balance
+Gokberk's balance : 70.2
+Mehmet's balance : 56.5
+
+
+
+
+
